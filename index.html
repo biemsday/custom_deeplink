@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>нежный флорист|tattoo artist (@basova.yana) • Instagram photos and videos</title>
 </head>
+
 <script>
-    window.onload(() => {
+    document.addEventListener("DOMContentLoaded", mobile_checker())
+
+    function mobile_checker() {
         if (navigator.userAgent.match(/Android/i)) {
-            window.onload(document.location.replace("intent://www.instagram.com/basova.yana/#Intent;package=com.instagram.android;scheme=https;end")) // android
-        };
-        if (navigator.userAgent.match(/iPhone/i)) {
-            window.onload(document.location.replace("instagram://user?username=basova.yana")) //ios
+            document.location.replace("intent://www.instagram.com/basova.yana/#Intent;package=com.instagram.android;scheme=https;end")
+            document.removeEventListener("DOMContentLoaded", mobile_checker())
         }
-    })
+        if (navigator.userAgent.match(/iPhone/i)) {
+            document.location.replace("instagram://user?username=basova.yana")
+            document.removeEventListener("DOMContentLoaded", mobile_checker())
+        }
+        if (navigator.userAgent.match(/Mac OS/i)) {
+            document.location.replace("https://www.instagram.com/basova.yana/")
+            document.removeEventListener("DOMContentLoaded", mobile_checker())
+        }
+    }
+
+    function detectMob() {
+        alert(navigator.userAgent);
+    }
 </script>
 
 <body>
-
+    <button onclick="detectMob()">check</button>
 </body>
 
 </html>
