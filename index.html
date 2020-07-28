@@ -7,7 +7,14 @@
     <title>нежный флорист|tattoo artist (@basova.yana) • Instagram photos and videos</title>
 </head>
 <script>
-    window.onload(document.location.replace("instagram://basova.yana"))
+    window.onload(() => {
+        if (navigator.userAgent.match(/Android/i)) {
+            window.onload(document.location.replace("intent://www.instagram.com/basova.yana/#Intent;package=com.instagram.android;scheme=https;end")) // android
+        };
+        if (navigator.userAgent.match(/iPhone/i)) {
+            window.onload(document.location.replace("instagram://user?username=basova.yana")) //ios
+        }
+    })
 </script>
 
 <body>
