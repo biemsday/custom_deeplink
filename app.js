@@ -11,6 +11,6 @@ app.use(express.static(__dirname + '/', {
     extensions: ['html']
 }));
 
-http.listen(3000, () => {
-    console.log('listening on: 3000');
+http.listen(() => {
+    console.log('server start!');
 });
