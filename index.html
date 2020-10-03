@@ -46,9 +46,14 @@
     src="https://www.facebook.com/tr?id=2495341467238877&ev=PageView&noscript=1"
     /></noscript>
 
-    <script async=true>
+    <script async>
         fbq('trackCustom', 'track_deeplink');
         document.addEventListener("DOMContentLoaded", mobile_checker())
+
+        gtag('event', 'ga_event', {
+            'event_category': 'Deeplink Service',
+            'event_action': 'Go to Instagram',
+        });
 
         function mobile_checker() {
             if (navigator.userAgent.match(/Android/i)) {
