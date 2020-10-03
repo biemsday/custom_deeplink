@@ -2,38 +2,68 @@
 <html lang="en">
 
 <head>
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TQTKVQV');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow" />
     <meta name="version" content="1.0.1" />
-    <link rel="stylesheet" href="./style/style.css">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.barbarisa.ru/style//img/title.png" />
-    <meta property="og:image:secure_url" content="https://www.barbarisa.ru/style//img/title.png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="300" />
     <title>нежный флорист|tattoo artist (@basova.yana) • Instagram photos and videos</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163996971-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163996971-1');
+    </script>
+
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2495341467238877');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2495341467238877&ev=PageView&noscript=1"
+    /></noscript>
+
+    <script async=true>
+        fbq('trackCustom', 'track_deeplink');
+        document.addEventListener("DOMContentLoaded", mobile_checker())
+
+        function mobile_checker() {
+            if (navigator.userAgent.match(/Android/i)) {
+                document.location.replace("intent://www.instagram.com/basova.yana/#Intent;package=com.instagram.android;scheme=https;end")
+            } else if (navigator.userAgent.match(/iPhone/i)) {
+                document.location.replace("instagram://user?username=basova.yana")
+            } else if (navigator.userAgent.match(/Mac OS/i)) {
+                document.location.replace("https://www.instagram.com/basova.yana/")
+            }
+            document.removeEventListener("DOMContentLoaded", mobile_checker())
+        }
+    </script>
 </head>
 
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQTKVQV"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
