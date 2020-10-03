@@ -4,24 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>нежный флорист|tattoo artist (@basova.yana) • Instagram photos and videos</title>
+    <title>Free deeplink service • Instagram deeplinks</title>
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <script src="./client.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/less"></script>
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", mobile_checker())
-
-    function mobile_checker() {
-        if (navigator.userAgent.match(/Android/i)) {
-            document.location.replace("intent://www.instagram.com/basova.yana/#Intent;package=com.instagram.android;scheme=https;end")
-        } else if (navigator.userAgent.match(/iPhone/i)) {
-            document.location.replace("instagram://user?username=basova.yana")
-        } else if (navigator.userAgent.match(/Mac OS/i)) {
-            document.location.replace("https://www.instagram.com/basova.yana/")
-        }
-        document.removeEventListener("DOMContentLoaded", mobile_checker())
-    }
-</script>
 
 <body>
+    <div class="module">
+        <h1>Free deeplink service.</h1>
+        <h2>Easy way to make deeplink.</h2>
+        <input id="user_profile" type="text" class="input" placeholder="Enter Instagram profile name without '@'">
+        <button id="generate" class="btn">Generate</button>
+    </div>
 </body>
 
 </html>
