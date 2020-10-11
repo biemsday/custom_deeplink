@@ -1,0 +1,13 @@
+runtime: nodejs10 # or nodejs10
+
+env_variables:
+  BUCKET_NAME: "deeplink"
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
