@@ -15,4 +15,4 @@ app.get('/svet_dyak', function(req, res) {
     res.sendFile(path.join(__dirname + '/svet_dyak/index.html'))
 });
 
-app.listen(port, () => console.log(`istening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));
